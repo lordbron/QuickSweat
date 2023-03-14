@@ -58,6 +58,29 @@ class AppModel:ObservableObject {
 
     }
     
+    func removeExerciseLocally(_ exercise:ExerciseDTO) -> Void {
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Exercise")
+        let predicate = NSPredicate(format: "name = %@", exercise.name)
+        fetchRequest.predicate = predicate
+        do {
+            let faves = try viewContext.fetch(fetchRequest) as? [Exercise] ?? [Exercise]()
+            if !faves.isEmpty {
+                viewContext.delete(faves[0])
+            }
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        } catch {
+        }
+
+    }
+    
     func saveExerciseLocally(_ exercise:ExerciseDTO) -> Void {
         let newExercise = Exercise(context: viewContext)
         newExercise.difficulty = exercise.difficulty
@@ -78,7 +101,7 @@ class AppModel:ObservableObject {
     func removeFaveExcercise(exercise:ExerciseDTO) -> Void {
         if let index = likedExercises.firstIndex(where: {$0.name == exercise.name}) {
             likedExercises.remove(at: index)
-            print("removed")
+            removeExerciseLocally(exercise)
         }
     }
 
