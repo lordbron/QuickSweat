@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  QuickSweat
+
+  Created by Thomas Ortega II on 3/14/23.
+  
+*/
+"abdominals" = "Abdominals";
+"abductors" = "Abductors";
+"adductors" = "Adductors";
+"biceps" = "Biceps";
+"calves" = "Calves";
+"chest" = "Chest";
+"forearms" = "Forearms";
+"glutes" = "Glutes";
+"hamstrings" = "Hamstrings";
+"lats" = "Lats";
+"lower_back" = "Lower Back";
+"middle_back" = "Middle Back";
+"neck" = "Neck";
+"quadriceps" = "Quadriceps";
+"traps" = "Traps";
+"triceps" = "Triceps";
+
+/* Titles */
+"muscle_group" = "Muscle Groups";
+"exercises" = "Exercises";
+
+/* Labels */
+"choose_muscle" = "Pick one:";
+"faves" = "Favorites";
+"thumbsup" = "Give an exercise a thumbs up to save them here.";
