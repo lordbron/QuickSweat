@@ -45,8 +45,20 @@ struct ContentView: View {
                         .foregroundColor(Color.black)
                 }
             }
-            VStack {
-                Text("faves")
+            NavigationView {
+                VStack {
+                    Text("faves")
+                    List {
+                        ForEach(appModel.likedExercises, id:\.name) { exercise in
+                            NavigationLink {
+                                ExerciseDetail(exercise: exercise)
+                            } label: {
+                                Text(exercise.name.capitalized)
+                            }
+                        }
+                    }
+                    .navigationBarTitle("muscle_group")
+                }
             }
             .tabItem{
                 VStack {

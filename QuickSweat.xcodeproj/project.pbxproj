@@ -33,6 +33,7 @@
 		E288AAE429C0336200065C01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E288AAE829C0336200065C01 /* Localizable.strings */; };
 		E288AAE529C0336200065C01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E288AAE829C0336200065C01 /* Localizable.strings */; };
 		E288AAE629C0336200065C01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E288AAE829C0336200065C01 /* Localizable.strings */; };
+		E2C1DBC129C0A0840094E841 /* ExerciseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C1DBC029C0A0830094E841 /* ExerciseDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E288AAD829BFC6B600065C01 /* BaseMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMediator.swift; sourceTree = "<group>"; };
 		E288AADC29BFD4F200065C01 /* ExerciseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDTO.swift; sourceTree = "<group>"; };
 		E288AAE729C0336200065C01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2C1DBC029C0A0830094E841 /* ExerciseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		E288AACB29BFBE7100065C01 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				E2C1DBC029C0A0830094E841 /* ExerciseDetail.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				E23632EF29BFA98600A6A0D8 /* Persistence.swift in Sources */,
 				E288AADD29BFD4F200065C01 /* ExerciseDTO.swift in Sources */,
 				E23632E829BFA98500A6A0D8 /* ContentView.swift in Sources */,
+				E2C1DBC129C0A0840094E841 /* ExerciseDetail.swift in Sources */,
 				E288AAD929BFC6B600065C01 /* BaseMediator.swift in Sources */,
 				E23632E629BFA98500A6A0D8 /* QuickSweatApp.swift in Sources */,
 				E288AACE29BFBFB900065C01 /* ExerciseAPIDataMediator.swift in Sources */,

@@ -15,7 +15,7 @@ struct ExerciseDTO:Codable {
     let name:String
     let type:String
     
-    func convertCDToMe(exercise: Exercise) -> ExerciseDTO {
+    static func convertCDToMe(exercise: Exercise) -> ExerciseDTO {
         return ExerciseDTO(
             difficulty: exercise.difficulty ?? "",
             equipment: exercise.equipment ?? "",
