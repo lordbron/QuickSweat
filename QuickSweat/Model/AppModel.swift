@@ -20,7 +20,9 @@ class AppModel:ObservableObject {
     func findExercises(muscle:String) -> Void {
         exerciseMediator.searchForExcercises(muscleSelection: muscle) { exercises in
             print(exercises)
-            self.exercises = exercises
+            DispatchQueue.main.async {
+                self.exercises = exercises
+            }
         }
     }
 
