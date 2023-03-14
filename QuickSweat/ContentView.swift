@@ -23,13 +23,7 @@ struct ContentView: View {
                                 List {
                                     ForEach(appModel.exercises, id:\.name) { exercise in
                                         NavigationLink {
-                                            VStack (alignment:.leading) {
-                                                ScrollView {
-                                                    Text(exercise.name)
-                                                    Text(exercise.instructions)
-                                                }
-
-                                            }.frame(alignment:.topLeading)
+                                            ExerciseDetail(exercise: exercise)
                                         } label: {
                                             Text(exercise.name.capitalized)
                                         }
