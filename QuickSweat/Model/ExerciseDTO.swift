@@ -15,4 +15,14 @@ struct ExerciseDTO:Codable {
     let name:String
     let type:String
     
+    func convertCDToMe(exercise: Exercise) -> ExerciseDTO {
+        return ExerciseDTO(
+            difficulty: exercise.difficulty ?? "",
+            equipment: exercise.equipment ?? "",
+            instructions: exercise.instructions ?? "",
+            muscle: exercise.muscle ?? "",
+            name: exercise.name ?? "",
+            type: exercise.type ?? ""
+        )
+    }
 }

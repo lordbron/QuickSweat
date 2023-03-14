@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject private var appModel:AppModel
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -40,6 +41,7 @@ struct ContentView: View {
             }
             Text("Select an item")
         }.onAppear{
+            appModel.findExercises(muscle: "biceps")
         }
     }
 
