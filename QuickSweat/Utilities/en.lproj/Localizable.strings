@@ -28,4 +28,5 @@
 
 /* Labels */
 "choose_muscle" = "Pick one:";
-"faves" = "Faves";
+"faves" = "Favorites";
+"thumbsup" = "Give an exercise a thumbs up to save them here.";

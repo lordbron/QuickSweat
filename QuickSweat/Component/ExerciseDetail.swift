@@ -15,9 +15,9 @@ struct ExerciseDetail: View {
     var body: some View {
         VStack (alignment:.center) {
             ScrollView {
-                Text(exercise.name)
+                Text(exercise.name).bold().padding()
                 Text(exercise.instructions)
-            }
+            }.frame(alignment: .leading)
             Button {
                 liked.toggle()
                 if liked {
@@ -36,7 +36,7 @@ struct ExerciseDetail: View {
             }
         }.task {
             liked = appModel.isFaveExcercise(exercise: exercise)
-        }
+        }.padding()
     }
 }
 

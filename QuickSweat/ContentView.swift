@@ -47,18 +47,22 @@ struct ContentView: View {
             }
             NavigationView {
                 VStack {
-                    Text("faves")
-                    List {
-                        ForEach(appModel.likedExercises, id:\.name) { exercise in
-                            NavigationLink {
-                                ExerciseDetail(exercise: exercise)
-                            } label: {
-                                Text(exercise.name.capitalized)
+                    if appModel.likedExercises.isEmpty {
+                        Text("thumbsup")
+                            .padding()
+                    } else {
+                        List {
+                            ForEach(appModel.likedExercises, id:\.name) { exercise in
+                                NavigationLink {
+                                    ExerciseDetail(exercise: exercise)
+                                } label: {
+                                    Text(exercise.name.capitalized)
+                                }
                             }
                         }
                     }
-                    .navigationBarTitle("muscle_group")
                 }
+                .navigationBarTitle("faves")
             }
             .tabItem{
                 VStack {
